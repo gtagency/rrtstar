@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar-standalone/src/kdtree.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+kdtree.h
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar-standalone/src/kdtree.h
+malloc.h
+-
+pthread.h
+-
+
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar-standalone/src/kdtree.h
+

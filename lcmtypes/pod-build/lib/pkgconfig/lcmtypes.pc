@@ -1,0 +1,11 @@
+prefix=/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: lcmtypes
+Description: lcmtypes
+Requires: 
+Version: 0.0.1
+Libs: -L${exec_prefix}/lib  -llcmtypes_lcmtypes
+Cflags: 

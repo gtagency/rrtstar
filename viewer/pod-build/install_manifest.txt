@@ -1,0 +1,5 @@
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/renderers/graph_renderer.h
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/lib/librenderers.dylib
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/lib/pkgconfig/renderers.pc
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/lib/pkgconfig/viewer.pc
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/bin/viewer

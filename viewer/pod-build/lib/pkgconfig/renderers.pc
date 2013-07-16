@@ -1,0 +1,11 @@
+prefix=/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: renderers
+Description: renderers
+Requires:  bot2-core bot2-vis lcmtypes
+Version: 0.0.1
+Libs: -L${libdir}  -lrenderers
+Cflags: -I${includedir} 

@@ -1,0 +1,11 @@
+prefix=/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: rrtstar
+Description: rrtstar
+Requires:  lcmtypes
+Version: 0.0.1
+Libs: -L${exec_prefix}/lib  -lrrtstar
+Cflags: 

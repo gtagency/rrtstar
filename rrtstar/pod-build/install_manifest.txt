@@ -1,0 +1,2 @@
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/lib/pkgconfig/rrtstar.pc
+/Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/bin/rrtstar
