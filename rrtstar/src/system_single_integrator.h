@@ -337,6 +337,12 @@ namespace SingleIntegrator {
          */
         int getTrajectory (State& stateFromIn, State& stateToIn, std::list<double*>& trajectoryOut);
         
+	 	//// METHODS ADDED BY JR FOR TESTING AND EVAL
+	 
+		double heading;
+		double getHeading();
+	 	void setHeading(double heading);
+	 
     };
 }
 

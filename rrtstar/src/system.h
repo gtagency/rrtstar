@@ -182,6 +182,7 @@ public:
      *
      */
     int getTrajectory (State& stateFromIn, State& stateToIn, std::list< double* > & trajectoryOut);
+	 
 };
 
 #endif

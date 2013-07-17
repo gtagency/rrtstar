@@ -160,6 +160,7 @@ double Trajectory::evaluateCost () {
 System::System () {
     
     numDimensions = 0;
+	heading = 0.0;
 }
 
 
@@ -225,17 +226,35 @@ bool System::IsInCollision (double *stateIn) {
     return false;
 } 
 
+double System::getHeading() {
+	return heading;
+}
+
+void System::setHeading(double headingIn) {
+	heading = headingIn;
+}
 
 int System::sampleState (State &randomStateOut) {
     
     randomStateOut.setNumDimensions (numDimensions);
     
     for (int i = 0; i < numDimensions; i++) {
-        
-        randomStateOut.x[i] = (double)rand()/(RAND_MAX + 1.0)*regionOperating.size[i] 
-        - regionOperating.size[i]/2.0 + regionOperating.center[i];
+        if (i == 1 || true) {
+	        randomStateOut.x[i] = (double)rand()/(RAND_MAX + 1.0)*regionOperating.size[i] 
+		    - regionOperating.size[i]/2.0;
+		} else {
+	        randomStateOut.x[i] = (double)rand()/(RAND_MAX + 1.0)*regionOperating.size[i]/2;
+		}
     }
     
+	//rotate to fit within our search window
+	//NOTE: currently assumes 2D coordinates
+//	double heading = 0;//3.5 * M_PI / 2;
+	double oldX = randomStateOut.x[1];
+	double oldY = randomStateOut.x[0];
+	randomStateOut.x[1] = oldX * sin(heading) + oldY * cos(heading) + regionOperating.center[1];
+	randomStateOut.x[0] = oldX * cos(heading) - oldY * sin(heading) + regionOperating.center[0];
+	
     if (IsInCollision (randomStateOut.x))
         return 0;
     

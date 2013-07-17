@@ -319,9 +319,9 @@ RRTstar::Planner<State, Trajectory, System>
         return 0;
     
     // Backup the root
-    Vertex<State,Trajectory,System> *rootBackup = NULL;
-    if (root)
-        rootBackup = new Vertex<State,Trajectory,System> (*root);
+//    Vertex<State,Trajectory,System> *rootBackup = NULL;
+  //  if (root)
+    //    rootBackup = new Vertex<State,Trajectory,System> (*root);
     
     // Delete all the vertices
     for (typename std::list< Vertex<State,Trajectory,System>* >::iterator iter = listVertices.begin(); iter != listVertices.end(); iter++)
@@ -340,8 +340,14 @@ RRTstar::Planner<State, Trajectory, System>
     
     // Initialize the variables
     numDimensions = system->getNumDimensions();
-    root = rootBackup;
-    if (root){
+	if (system) {
+	    // Initialize the root vertex
+	    root = new Vertex<State,Trajectory,System>;
+	    root->state = new State (system->getRootState());
+	    root->costFromParent = 0.0;
+	    root->costFromRoot = 0.0;
+	    root->trajFromParent = NULL;
+	
         listVertices.push_back(root);
         insertIntoKdtree (*root);
         numVertices++;

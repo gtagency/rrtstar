@@ -25,7 +25,7 @@ typedef Vertex<State,Trajectory,System> vertex_t;
 
 int min(int a, int b);
 void printXY(double *values);
-bool updateSearchRoot(planner_t& planner, double *waypoint, double delta);
+void updateSearchRoot(planner_t& planner, System& system, double *waypoint, double delta);
 void updateIncrementalRegionGoal(System& system, double *goal, double *step);
 
 int publishTree (lcm_t *lcm, planner_t& planner, System& system);
@@ -41,8 +41,8 @@ void updateIncrementalRegionGoal(System& system, double *goal, double *step) {
     //system.regionGoal.size[2] = 10;
 }
 
-bool updateSearchRoot(planner_t& planner, double *waypoint, double delta) {
-    vertex_t &root = planner.getRootVertex();  
+void updateSearchRoot(planner_t& planner, System& system, double *waypoint, double delta) {
+/*    vertex_t &root = planner.getRootVertex();  
     State &rootState = root.getState();
 	double newRoot[] = {min(waypoint[0], rootState[0] + delta), min(waypoint[1], rootState[1] + delta)};
 	rootState[0] = newRoot[0];
@@ -51,7 +51,20 @@ bool updateSearchRoot(planner_t& planner, double *waypoint, double delta) {
     // (Re) Initialize the planner
 	cout << "Reiniting the planner" << endl;
     planner.initialize ();
-	return waypoint[0] == newRoot[0] && waypoint[1] == newRoot[1];
+	return waypoint[0] == newRoot[0] && waypoint[1] == newRoot[1];*/
+	State& rootState = system.getRootState();
+	double angle = atan2(waypoint[0] - rootState[0], waypoint[1] - rootState[1]);
+	double deltaX = delta * sin(angle);
+	double deltaY = delta * cos(angle);
+	double newRoot[] = {rootState[0] + deltaX, rootState[1] + deltaY};
+	rootState[0] = newRoot[0];
+	rootState[1] = newRoot[1];
+	
+	system.setHeading(2 * M_PI - angle);
+
+    // (Re) Initialize the planner
+	cout << "Reiniting the planner" << endl;
+    planner.initialize ();
 }
 
 int min(int a, int b) {
@@ -59,7 +72,7 @@ int min(int a, int b) {
 }
 
 void printXY(string prefix, double *values) {
-	cout << prefix << "x: " << values[0] << ", y: " << values[1] << endl;	
+	cout << prefix << "y: " << values[0] << ", x: " << values[1] << endl;	
 }
 
 int main () {
@@ -114,13 +127,13 @@ int main () {
 //    obstacle->size[2] = 2;
     
     system.obstacles.push_front (obstacle);  // Add the obstacle to the list
-	/*
+
     obstacle = new region;
     obstacle->setNumDimensions(2);
-    obstacle->center[0] = 0;
+    obstacle->center[0] = -4;
     obstacle->center[1] = 2;
   //  obstacle->center[2] = 2;
-    obstacle->size[0] = 17;
+    obstacle->size[0] = 16;
     obstacle->size[1] = 2;
 //    obstacle->size[2] = 2;
     
@@ -131,12 +144,44 @@ int main () {
     obstacle->center[0] = 0;
     obstacle->center[1] = -2;
   //  obstacle->center[2] = 2;
-    obstacle->size[0] = 17;
+    obstacle->size[0] = 24;
     obstacle->size[1] = 2;
 //    obstacle->size[2] = 2;
-	*/
+
     system.obstacles.push_front (obstacle);  // Add the obstacle to the list
 
+    obstacle = new region;
+    obstacle->setNumDimensions(2);
+    obstacle->center[0] = 11;
+    obstacle->center[1] = 3;
+  //  obstacle->center[2] = 2;
+    obstacle->size[0] = 2;
+    obstacle->size[1] = 8;
+//    obstacle->size[2] = 2;
+
+    system.obstacles.push_front (obstacle);  // Add the obstacle to the list
+
+    obstacle = new region;
+    obstacle->setNumDimensions(2);
+    obstacle->center[0] = 0;
+    obstacle->center[1] = 7;
+  //  obstacle->center[2] = 2;
+    obstacle->size[0] = 24;
+    obstacle->size[1] = 2;
+//    obstacle->size[2] = 2;
+
+    system.obstacles.push_front (obstacle);  // Add the obstacle to the list
+
+    obstacle = new region;
+    obstacle->setNumDimensions(2);
+    obstacle->center[0] = -12;
+    obstacle->center[1] = 0;
+  //  obstacle->center[2] = 2;
+    obstacle->size[0] = 2;
+    obstacle->size[1] = 6;
+//    obstacle->size[2] = 2;
+
+    system.obstacles.push_front (obstacle);  // Add the obstacle to the list
     publishEnvironment (lcm, system.regionOperating, system.regionGoal, system.obstacles);
 
     // Add the system to the planner
@@ -144,13 +189,14 @@ int main () {
     
     // Set up the root vertex
 	
-	double rootPos[] = {0.0, 0.0};
+	double rootPos[] = {-8.0, 0.0};
 //	updateSearchRoot(rrts, rootPos, 0);
-    vertex_t &root = rrts.getRootVertex();  
-    State &rootState = root.getState();
+//    vertex_t &root = rrts.getRootVertex();  
+    State &rootState = system.getRootState();
 	rootState[0] = rootPos[0];
 	rootState[1] = rootPos[1];
 //	rootState[2] = position[2];
+	system.setHeading(3*M_PI/2);
     // (Re) Initialize the planner
     rrts.initialize ();
     
@@ -161,7 +207,7 @@ int main () {
     rrts.setGamma (1.5);
 
     clock_t start = clock();
-
+	
 	int steps = 0;
 	int maxSteps = 200;
 	
@@ -203,26 +249,29 @@ int main () {
 		double elapsed = ((double)(move_end-move_start))/CLOCKS_PER_SEC;
 		printXY("Navigating to: ", waypoint);
 		cout << "Moved: " << velocity * elapsed << endl;
-		bool atRef = updateSearchRoot(rrts, waypoint, velocity * elapsed);
+		updateSearchRoot(rrts, system, waypoint, velocity * elapsed);
+		
+		bool atRef = system.isReachingTarget(system.getRootState());
 		if (atRef) {
 			updateIncrementalRegionGoal(system, goal, st);
 		}
 
 		double rs[] = {rrts.getRootVertex().getState()[0], rrts.getRootVertex().getState()[1]};
 		printXY("New Root: ", rs);
+		cout << "New Heading: " << system.getHeading() << endl;
 		printXY("New Goal: ", system.regionGoal.center);
 	    clock_t finish = clock();
 	    cout << "Time : " << ((double)(finish-start))/CLOCKS_PER_SEC << endl;
 
-		usleep(1000*1000);
+		//usleep(1000*1000);
 	} while (++steps < maxSteps);
 
 	while (&rrts.getBestVertex() == NULL) {
         rrts.iteration();
 	}
 	
-
 	/*
+	
     // Run the algorithm for 10000 iteartions
     for (int i = 0; i < 10000; i++) {
         rrts.iteration ();
@@ -233,7 +282,7 @@ int main () {
 			cout << "Found best vertex in " << i << " iterations" << endl;
 			break;
 		}
-		usleep(100 * 1000);
+		//usleep(100 * 1000);
     }
 	*/
     clock_t finish = clock();
@@ -243,6 +292,18 @@ int main () {
     
     publishTraj (lcm, rrts, system);
     
+	list<double*> stateList;
+	rrts.getBestTrajectory(stateList);
+	cout << "States: " << stateList.size() << endl;
+	int trajInx = 0;
+	
+    for (list<double*>::iterator iter = stateList.begin(); iter != stateList.end(); iter++) {
+        double* stateRef = *iter;
+        printXY("Trajectory: ", stateRef);
+		
+        delete [] stateRef;
+    }
+	
     return 1;
 }
 
@@ -255,17 +316,17 @@ int publishEnvironment (lcm_t *lcm, region& regionOperating, region& regionGoal,
     
     environment->operating.center[0] = regionOperating.center[0];
     environment->operating.center[1] = regionOperating.center[1];
-    environment->operating.center[2] = regionOperating.center[2];
+    //environment->operating.center[2] = regionOperating.center[2];
     environment->operating.size[0] = regionOperating.size[0];
     environment->operating.size[1] = regionOperating.size[1];
-    environment->operating.size[2] = regionOperating.size[2];
+    //environment->operating.size[2] = regionOperating.size[2];
 
     environment->goal.center[0] = regionGoal.center[0];
     environment->goal.center[1] = regionGoal.center[1];
-    environment->goal.center[2] = regionGoal.center[2];
+    //environment->goal.center[2] = regionGoal.center[2];
     environment->goal.size[0] = regionGoal.size[0];
     environment->goal.size[1] = regionGoal.size[1];
-    environment->goal.size[2] = regionGoal.size[2];
+    //environment->goal.size[2] = regionGoal.size[2];
     
     
     environment->num_obstacles = obstacles.size();
@@ -280,10 +341,10 @@ int publishEnvironment (lcm_t *lcm, region& regionOperating, region& regionGoal,
         
         environment->obstacles[idx_obstacles].center[0] = obstacleCurr->center[0];
         environment->obstacles[idx_obstacles].center[1] = obstacleCurr->center[1];
-        environment->obstacles[idx_obstacles].center[2] = obstacleCurr->center[2];
+       // environment->obstacles[idx_obstacles].center[2] = obstacleCurr->center[2];
         environment->obstacles[idx_obstacles].size[0] = obstacleCurr->size[0];
         environment->obstacles[idx_obstacles].size[1] = obstacleCurr->size[1];
-        environment->obstacles[idx_obstacles].size[2] = obstacleCurr->size[2];
+        //environment->obstacles[idx_obstacles].size[2] = obstacleCurr->size[2];
         
         idx_obstacles++;
     }
