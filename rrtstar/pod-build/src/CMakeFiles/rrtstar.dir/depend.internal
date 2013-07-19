@@ -4,7 +4,11 @@
 src/CMakeFiles/rrtstar.dir/kdtree.c.o
  /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/kdtree.c
  /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/kdtree.h
-src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o
+src/CMakeFiles/rrtstar.dir/car_system.cpp.o
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/car_system.cpp
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/car_system.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.h
+src/CMakeFiles/rrtstar.dir/publisher.cpp.o
  /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/bot_core.h
  /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/camtrans.h
  /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/circular.h
@@ -46,11 +50,9 @@ src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o
  /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_state_t.h
  /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_trajectory_t.h
  /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_vertex_t.h
- /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/kdtree.h
- /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/rrts.h
- /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/rrts.hpp
- /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/rrts_main.cpp
- /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/system_single_integrator.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/publisher.cpp
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/publisher.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.h
  /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib.h
  /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/gallocator.h
  /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/gcache.h
@@ -130,6 +132,134 @@ src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o
  /usr/local/include/lcm/eventlog.h
  /usr/local/include/lcm/lcm.h
  /usr/local/include/lcm/lcm_coretypes.h
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o
- /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/system_single_integrator.cpp
- /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/system_single_integrator.h
+src/CMakeFiles/rrtstar.dir/region.cpp.o
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.cpp
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.h
+src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/bot_core.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/camtrans.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/circular.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/color_util.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/ctrans.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/fasttrig.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/fileutils.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/glib_util.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/gps_linearize.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/lcm_util.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/math_util.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/minheap.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/ppm.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/ptr_circular.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/rand_util.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/ringbuf.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/rotations.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/serial.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/set.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/signal_pipe.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/small_linalg.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/ssocket.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/tictoc.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/timespec.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/timestamp.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/bot_core/trans.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/lcmtypes/bot_core_image_metadata_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/lcmtypes/bot_core_image_sync_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/lcmtypes/bot_core_image_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/lcmtypes/bot_core_planar_lidar_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/lcmtypes/bot_core_pose_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/lcmtypes/bot_core_raw_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/libbot-read-only/trunk/build/include/lcmtypes/bot_core_rigid_transform_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_edge_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_environment_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_graph_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_region_3d_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_state_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_trajectory_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/build/include/lcmtypes/lcmtypes_vertex_t.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/car_system.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/kdtree.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/publisher.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/rrts.h
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/rrts.hpp
+ /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/rrts_main.cpp
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/gallocator.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/gcache.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/gcompletion.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/gmain.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/grel.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/deprecated/gthread.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/galloca.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/garray.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gasyncqueue.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gatomic.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gbacktrace.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gbase64.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gbitlock.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gbookmarkfile.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gbytes.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gcharset.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gchecksum.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gconvert.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gdataset.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gdate.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gdatetime.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gdir.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/genviron.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gerror.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gfileutils.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/ggettext.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/ghash.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/ghmac.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/ghook.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/ghostutils.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/giochannel.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gkeyfile.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/glist.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gmacros.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gmain.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gmappedfile.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gmarkup.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gmem.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gmessages.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gnode.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/goption.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gpattern.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gpoll.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gprimes.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gqsort.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gquark.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gqueue.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/grand.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gregex.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gscanner.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gsequence.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gshell.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gslice.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gslist.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gspawn.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gstrfuncs.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gstring.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gstringchunk.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gtestutils.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gthread.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gthreadpool.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gtimer.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gtimezone.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gtrashstack.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gtree.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gtypes.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gunicode.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gurifuncs.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gutils.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gvariant.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gvarianttype.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gversion.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gversionmacros.h
+ /usr/local/Cellar/glib/2.36.2/include/glib-2.0/glib/gwin32.h
+ /usr/local/Cellar/glib/2.36.2/lib/glib-2.0/include/glibconfig.h
+ /usr/local/include/lcm/eventlog.h
+ /usr/local/include/lcm/lcm.h
+ /usr/local/include/lcm/lcm_coretypes.h

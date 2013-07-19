@@ -252,8 +252,8 @@ int System::sampleState (State &randomStateOut) {
 //	double heading = 0;//3.5 * M_PI / 2;
 	double oldX = randomStateOut.x[1];
 	double oldY = randomStateOut.x[0];
-	randomStateOut.x[1] = oldX * sin(heading) + oldY * cos(heading) + regionOperating.center[1];
-	randomStateOut.x[0] = oldX * cos(heading) - oldY * sin(heading) + regionOperating.center[0];
+//	randomStateOut.x[1] = oldX * sin(heading) + oldY * cos(heading) + regionOperating.center[1];
+//	randomStateOut.x[0] = oldX * cos(heading) - oldY * sin(heading) + regionOperating.center[0];
 	
     if (IsInCollision (randomStateOut.x))
         return 0;

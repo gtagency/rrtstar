@@ -156,6 +156,30 @@ rrtstar/fast:
 	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/build
 .PHONY : rrtstar/fast
 
+car_system.o: car_system.cpp.o
+.PHONY : car_system.o
+
+# target to build an object file
+car_system.cpp.o:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/car_system.cpp.o
+.PHONY : car_system.cpp.o
+
+car_system.i: car_system.cpp.i
+.PHONY : car_system.i
+
+# target to preprocess a source file
+car_system.cpp.i:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/car_system.cpp.i
+.PHONY : car_system.cpp.i
+
+car_system.s: car_system.cpp.s
+.PHONY : car_system.s
+
+# target to generate assembly for a file
+car_system.cpp.s:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/car_system.cpp.s
+.PHONY : car_system.cpp.s
+
 kdtree.o: kdtree.c.o
 .PHONY : kdtree.o
 
@@ -179,6 +203,54 @@ kdtree.s: kdtree.c.s
 kdtree.c.s:
 	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/kdtree.c.s
 .PHONY : kdtree.c.s
+
+publisher.o: publisher.cpp.o
+.PHONY : publisher.o
+
+# target to build an object file
+publisher.cpp.o:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/publisher.cpp.o
+.PHONY : publisher.cpp.o
+
+publisher.i: publisher.cpp.i
+.PHONY : publisher.i
+
+# target to preprocess a source file
+publisher.cpp.i:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/publisher.cpp.i
+.PHONY : publisher.cpp.i
+
+publisher.s: publisher.cpp.s
+.PHONY : publisher.s
+
+# target to generate assembly for a file
+publisher.cpp.s:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/publisher.cpp.s
+.PHONY : publisher.cpp.s
+
+region.o: region.cpp.o
+.PHONY : region.o
+
+# target to build an object file
+region.cpp.o:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/region.cpp.o
+.PHONY : region.cpp.o
+
+region.i: region.cpp.i
+.PHONY : region.i
+
+# target to preprocess a source file
+region.cpp.i:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/region.cpp.i
+.PHONY : region.cpp.i
+
+region.s: region.cpp.s
+.PHONY : region.s
+
+# target to generate assembly for a file
+region.cpp.s:
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/region.cpp.s
+.PHONY : region.cpp.s
 
 rrts_main.o: rrts_main.cpp.o
 .PHONY : rrts_main.o
@@ -204,30 +276,6 @@ rrts_main.cpp.s:
 	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/rrts_main.cpp.s
 .PHONY : rrts_main.cpp.s
 
-system_single_integrator.o: system_single_integrator.cpp.o
-.PHONY : system_single_integrator.o
-
-# target to build an object file
-system_single_integrator.cpp.o:
-	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o
-.PHONY : system_single_integrator.cpp.o
-
-system_single_integrator.i: system_single_integrator.cpp.i
-.PHONY : system_single_integrator.i
-
-# target to preprocess a source file
-system_single_integrator.cpp.i:
-	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.i
-.PHONY : system_single_integrator.cpp.i
-
-system_single_integrator.s: system_single_integrator.cpp.s
-.PHONY : system_single_integrator.s
-
-# target to generate assembly for a file
-system_single_integrator.cpp.s:
-	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build && $(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.s
-.PHONY : system_single_integrator.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -241,15 +289,21 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... rrtstar"
+	@echo "... car_system.o"
+	@echo "... car_system.i"
+	@echo "... car_system.s"
 	@echo "... kdtree.o"
 	@echo "... kdtree.i"
 	@echo "... kdtree.s"
+	@echo "... publisher.o"
+	@echo "... publisher.i"
+	@echo "... publisher.s"
+	@echo "... region.o"
+	@echo "... region.i"
+	@echo "... region.s"
 	@echo "... rrts_main.o"
 	@echo "... rrts_main.i"
 	@echo "... rrts_main.s"
-	@echo "... system_single_integrator.o"
-	@echo "... system_single_integrator.i"
-	@echo "... system_single_integrator.s"
 .PHONY : help
 
 

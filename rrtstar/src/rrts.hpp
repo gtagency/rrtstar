@@ -559,9 +559,8 @@ RRTstar::Planner<State, Trajectory, System>
         
         State& stateCurr = vertexCurr->getState();
         
-        double *stateArrCurr = new double[2]; 
-        stateArrCurr[0] = stateCurr[0];
-        stateArrCurr[1] = stateCurr[1];
+        double *stateArrCurr = new double[system->getNumDimensions()]; 
+		stateCurr.getAsVector(system->getNumDimensions(), stateArrCurr);
         
         trajectoryOut.push_front (stateArrCurr);
         
@@ -579,10 +578,11 @@ RRTstar::Planner<State, Trajectory, System>
                 
                 double *stateArrFromParentCurr = *iter;
                 
-                stateArrCurr = new double[2];
-                stateArrCurr[0] = stateArrFromParentCurr[0];
-                stateArrCurr[1] = stateArrFromParentCurr[1];
-                
+				//TODO: why reallocate and copy?  why not juse use stateArrFromParentCurr
+                stateArrCurr = new double[system->getNumDimensions()];
+				for (int ii = 0; ii < system->getNumDimensions(); ii++) {
+	                stateArrCurr[ii] = stateArrFromParentCurr[ii];
+                }
                 trajectoryOut.push_front (stateArrCurr);
                 
                 delete [] stateArrFromParentCurr;

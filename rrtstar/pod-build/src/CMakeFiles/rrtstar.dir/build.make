@@ -75,32 +75,78 @@ src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o.provides: src/CMakeFiles/rrtstar.dir/
 
 src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o.provides.build: src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o
 
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o: src/CMakeFiles/rrtstar.dir/flags.make
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o: ../src/system_single_integrator.cpp
+src/CMakeFiles/rrtstar.dir/car_system.cpp.o: src/CMakeFiles/rrtstar.dir/flags.make
+src/CMakeFiles/rrtstar.dir/car_system.cpp.o: ../src/car_system.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o"
-	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o -c /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/system_single_integrator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/rrtstar.dir/car_system.cpp.o"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rrtstar.dir/car_system.cpp.o -c /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/car_system.cpp
 
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrtstar.dir/system_single_integrator.cpp.i"
-	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/system_single_integrator.cpp > CMakeFiles/rrtstar.dir/system_single_integrator.cpp.i
+src/CMakeFiles/rrtstar.dir/car_system.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrtstar.dir/car_system.cpp.i"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/car_system.cpp > CMakeFiles/rrtstar.dir/car_system.cpp.i
 
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrtstar.dir/system_single_integrator.cpp.s"
-	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/system_single_integrator.cpp -o CMakeFiles/rrtstar.dir/system_single_integrator.cpp.s
+src/CMakeFiles/rrtstar.dir/car_system.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrtstar.dir/car_system.cpp.s"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/car_system.cpp -o CMakeFiles/rrtstar.dir/car_system.cpp.s
 
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.requires:
-.PHONY : src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.requires
+src/CMakeFiles/rrtstar.dir/car_system.cpp.o.requires:
+.PHONY : src/CMakeFiles/rrtstar.dir/car_system.cpp.o.requires
 
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.provides: src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.provides.build
-.PHONY : src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.provides
+src/CMakeFiles/rrtstar.dir/car_system.cpp.o.provides: src/CMakeFiles/rrtstar.dir/car_system.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/car_system.cpp.o.provides.build
+.PHONY : src/CMakeFiles/rrtstar.dir/car_system.cpp.o.provides
 
-src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.provides.build: src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o
+src/CMakeFiles/rrtstar.dir/car_system.cpp.o.provides.build: src/CMakeFiles/rrtstar.dir/car_system.cpp.o
+
+src/CMakeFiles/rrtstar.dir/region.cpp.o: src/CMakeFiles/rrtstar.dir/flags.make
+src/CMakeFiles/rrtstar.dir/region.cpp.o: ../src/region.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/rrtstar.dir/region.cpp.o"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rrtstar.dir/region.cpp.o -c /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.cpp
+
+src/CMakeFiles/rrtstar.dir/region.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrtstar.dir/region.cpp.i"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.cpp > CMakeFiles/rrtstar.dir/region.cpp.i
+
+src/CMakeFiles/rrtstar.dir/region.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrtstar.dir/region.cpp.s"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/region.cpp -o CMakeFiles/rrtstar.dir/region.cpp.s
+
+src/CMakeFiles/rrtstar.dir/region.cpp.o.requires:
+.PHONY : src/CMakeFiles/rrtstar.dir/region.cpp.o.requires
+
+src/CMakeFiles/rrtstar.dir/region.cpp.o.provides: src/CMakeFiles/rrtstar.dir/region.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/region.cpp.o.provides.build
+.PHONY : src/CMakeFiles/rrtstar.dir/region.cpp.o.provides
+
+src/CMakeFiles/rrtstar.dir/region.cpp.o.provides.build: src/CMakeFiles/rrtstar.dir/region.cpp.o
+
+src/CMakeFiles/rrtstar.dir/publisher.cpp.o: src/CMakeFiles/rrtstar.dir/flags.make
+src/CMakeFiles/rrtstar.dir/publisher.cpp.o: ../src/publisher.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/rrtstar.dir/publisher.cpp.o"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rrtstar.dir/publisher.cpp.o -c /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/publisher.cpp
+
+src/CMakeFiles/rrtstar.dir/publisher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrtstar.dir/publisher.cpp.i"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/publisher.cpp > CMakeFiles/rrtstar.dir/publisher.cpp.i
+
+src/CMakeFiles/rrtstar.dir/publisher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrtstar.dir/publisher.cpp.s"
+	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/publisher.cpp -o CMakeFiles/rrtstar.dir/publisher.cpp.s
+
+src/CMakeFiles/rrtstar.dir/publisher.cpp.o.requires:
+.PHONY : src/CMakeFiles/rrtstar.dir/publisher.cpp.o.requires
+
+src/CMakeFiles/rrtstar.dir/publisher.cpp.o.provides: src/CMakeFiles/rrtstar.dir/publisher.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/rrtstar.dir/build.make src/CMakeFiles/rrtstar.dir/publisher.cpp.o.provides.build
+.PHONY : src/CMakeFiles/rrtstar.dir/publisher.cpp.o.provides
+
+src/CMakeFiles/rrtstar.dir/publisher.cpp.o.provides.build: src/CMakeFiles/rrtstar.dir/publisher.cpp.o
 
 src/CMakeFiles/rrtstar.dir/kdtree.c.o: src/CMakeFiles/rrtstar.dir/flags.make
 src/CMakeFiles/rrtstar.dir/kdtree.c.o: ../src/kdtree.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/rrtstar.dir/kdtree.c.o"
 	cd /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/pod-build/src && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/rrtstar.dir/kdtree.c.o   -c /Users/thejenix/Dropbox/School/Agency/dev/rrtstar/rrtstar/src/kdtree.c
 
@@ -124,14 +170,18 @@ src/CMakeFiles/rrtstar.dir/kdtree.c.o.provides.build: src/CMakeFiles/rrtstar.dir
 # Object files for target rrtstar
 rrtstar_OBJECTS = \
 "CMakeFiles/rrtstar.dir/rrts_main.cpp.o" \
-"CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o" \
+"CMakeFiles/rrtstar.dir/car_system.cpp.o" \
+"CMakeFiles/rrtstar.dir/region.cpp.o" \
+"CMakeFiles/rrtstar.dir/publisher.cpp.o" \
 "CMakeFiles/rrtstar.dir/kdtree.c.o"
 
 # External object files for target rrtstar
 rrtstar_EXTERNAL_OBJECTS =
 
 bin/rrtstar: src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o
-bin/rrtstar: src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o
+bin/rrtstar: src/CMakeFiles/rrtstar.dir/car_system.cpp.o
+bin/rrtstar: src/CMakeFiles/rrtstar.dir/region.cpp.o
+bin/rrtstar: src/CMakeFiles/rrtstar.dir/publisher.cpp.o
 bin/rrtstar: src/CMakeFiles/rrtstar.dir/kdtree.c.o
 bin/rrtstar: src/CMakeFiles/rrtstar.dir/build.make
 bin/rrtstar: src/CMakeFiles/rrtstar.dir/link.txt
@@ -143,7 +193,9 @@ src/CMakeFiles/rrtstar.dir/build: bin/rrtstar
 .PHONY : src/CMakeFiles/rrtstar.dir/build
 
 src/CMakeFiles/rrtstar.dir/requires: src/CMakeFiles/rrtstar.dir/rrts_main.cpp.o.requires
-src/CMakeFiles/rrtstar.dir/requires: src/CMakeFiles/rrtstar.dir/system_single_integrator.cpp.o.requires
+src/CMakeFiles/rrtstar.dir/requires: src/CMakeFiles/rrtstar.dir/car_system.cpp.o.requires
+src/CMakeFiles/rrtstar.dir/requires: src/CMakeFiles/rrtstar.dir/region.cpp.o.requires
+src/CMakeFiles/rrtstar.dir/requires: src/CMakeFiles/rrtstar.dir/publisher.cpp.o.requires
 src/CMakeFiles/rrtstar.dir/requires: src/CMakeFiles/rrtstar.dir/kdtree.c.o.requires
 .PHONY : src/CMakeFiles/rrtstar.dir/requires
 

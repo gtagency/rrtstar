@@ -13,3 +13,4 @@
 *.a
 
 build
+pod-build
